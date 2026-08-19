@@ -160,6 +160,34 @@ a:focus-visible, button:focus-visible{
 .stat-num{ font-family: var(--serif); font-size: clamp(1.4rem,2.4vw,1.9rem); color: var(--gold-deep); }
 .stat-label{ font-size: 0.79rem; color: var(--ink-faint); line-height: 1.35; max-width: 20ch; }
 
+.hero-visual {
+  position: absolute;
+  right: -5%;
+  top: 54%;
+  transform: translateY(-50%);
+  width: min(48vw, 760px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-visual {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    margin: 40px auto 0;
+    max-width: 500px;
+  }
+}
+
 /* ===========================================================
    Section shared / alignment system
    =========================================================== */
