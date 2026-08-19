@@ -18,7 +18,7 @@
   --serif: 'Fraunces', 'Liberation Serif', Georgia, serif;
   --sans: 'Inter', 'Liberation Sans', Arial, sans-serif;
 
-  --max: 1180px;
+  --max: 1440px;
   --pad: clamp(20px, 5vw, 64px);
   --section-y: clamp(72px, 9vw, 128px);
 
