@@ -221,7 +221,7 @@ section{ padding: var(--section-y) var(--pad); max-width: var(--max); margin: 0 
    About
    =========================================================== */
 .about{ background: var(--paper-dim); border-radius: var(--radius); }
-.about-grid{ display: grid; grid-template-columns: 320px 1fr; gap: 60px; align-items: center; }
+.about-grid{ display: grid; grid-template-columns: 320px 1fr; gap: 60px; align-items: start; }
 .portrait-frame{
   aspect-ratio: 1; border: 1px solid var(--line); border-radius: var(--radius);
   display: flex; align-items: center; justify-content: center;
