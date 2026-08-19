@@ -489,7 +489,7 @@ section{ padding: var(--section-y) var(--pad); max-width: var(--max); margin: 0 
    =========================================================== */
 .about{ background: var(--paper-dim); border-radius: var(--radius); }
 .about-grid{ display: grid; grid-template-columns: 440px 1fr; gap: 60px; align-items: start; }
-.portrait-frame{
+/* .portrait-frame{
   aspect-ratio: 1 / 1.5; border: 1px solid var(--line); border-radius: var(--radius);
   display: flex; align-items: center; justify-content: center;
   background: linear-gradient(160deg, var(--gold-tint), #fff);
@@ -506,7 +506,26 @@ section{ padding: var(--section-y) var(--pad); max-width: var(--max); margin: 0 
    */
   object-fit: cover;
 
-  object-position: center; }
+  object-position: center; } */
+.portrait-frame {
+  aspect-ratio: 2 / 3;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--gold-tint), #fff);
+  overflow: hidden;
+}
+
+.portrait-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
 .about-copy h2{ font-size: clamp(1.6rem,2.8vw,2.1rem); margin-top: 12px; max-width: 16ch; }
 .about-copy p{ margin-top: 18px; color: var(--ink-soft); font-size: 1rem; max-width: 60ch; }
 .about-facts{
