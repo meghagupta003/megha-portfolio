@@ -192,7 +192,7 @@ a:focus-visible, button:focus-visible{
    Section shared / alignment system
    =========================================================== */
 section{ padding: var(--section-y) var(--pad); max-width: var(--max); margin: 0 auto; }
-.section-head{ max-width: 620px; margin-bottom: 52px; }
+.section-head{ max-width: 700px; margin-bottom: 52px; }
 .section-head h2{ font-size: clamp(1.7rem,3.2vw,2.4rem); margin-top: 12px; }
 .section-sub{ margin-top: 16px; color: var(--ink-soft); font-size: 1rem; }
 
@@ -526,8 +526,8 @@ section{ padding: var(--section-y) var(--pad); max-width: var(--max); margin: 0 
   object-position: center center;
 }
 
-.about-copy h2{ font-size: clamp(1.6rem,2.8vw,2.1rem); margin-top: 12px; max-width: 16ch; }
-.about-copy p{ margin-top: 18px; color: var(--ink-soft); font-size: 1rem; max-width: 60ch; }
+.about-copy h2{ font-size: clamp(1.6rem,2.8vw,2.1rem); margin-top: 12px; max-width: 100ch; }
+.about-copy p{ margin-top: 18px; color: var(--ink-soft); font-size: 1rem; max-width: 100ch; }
 .about-facts{
   margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 26px;
   border-top: 1px solid var(--line-strong); padding-top: 26px;
