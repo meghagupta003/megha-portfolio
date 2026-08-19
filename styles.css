@@ -162,8 +162,8 @@ a:focus-visible, button:focus-visible{
 
 .hero-visual {
   position: absolute;
-  right: -5%;
-  top: 54%;
+  right: 2%;
+  top: 10%;
   transform: translateY(-50%);
   width: min(48vw, 760px);
   z-index: 1;
@@ -179,7 +179,7 @@ a:focus-visible, button:focus-visible{
 @media (max-width: 768px) {
   .hero-visual {
     position: relative;
-    right: auto;
+    right: 10%;
     top: auto;
     transform: none;
     width: 100%;
