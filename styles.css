@@ -199,7 +199,7 @@ section{ padding: var(--section-y) var(--pad); max-width: var(--max); margin: 0 
 /* ===========================================================
    Work — asymmetric image-block case study grid
    =========================================================== */
-.work{ background: var(--paper); }
+/* .work{ background: var(--paper); }
 .case-grid{
   display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
   align-items: start;
@@ -256,6 +256,232 @@ section{ padding: var(--section-y) var(--pad); max-width: var(--max); margin: 0 
   height: 100%;
   object-fit: cover;
   display: block;
+}*/
+
+/* ===========================================================
+   Work — asymmetric image-block case study grid
+   =========================================================== */
+
+.work {
+  background: var(--paper);
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.case-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.case-col--offset {
+  margin-top: 64px;
+}
+
+
+/* ===========================================================
+   Case Study Card
+   =========================================================== */
+
+.case-block {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+
+  transition:
+    box-shadow 0.3s var(--ease),
+    transform 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.case-block:hover {
+  box-shadow: 0 20px 44px rgba(28, 30, 36, 0.10);
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+}
+
+
+/* ===========================================================
+   Case Study Cover
+   =========================================================== */
+
+.case-cover {
+  position: relative;
+
+  /* Keeps every cover at 4:3 */
+  aspect-ratio: 4 / 3;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      150deg,
+      var(--gold-tint),
+      var(--paper-dim)
+    );
+}
+
+
+/* Tall card — still maintains 4:3 */
+.case-block--tall .case-cover {
+  aspect-ratio: 4 / 3;
+}
+
+
+/* Alternate cover backgrounds */
+
+.case-cover--alt {
+  background:
+    linear-gradient(
+      150deg,
+      #fff,
+      var(--gold-tint)
+    );
+}
+
+.case-cover--dark {
+  background:
+    linear-gradient(
+      160deg,
+      var(--ink),
+      #33363f
+    );
+}
+
+
+/* ===========================================================
+   Case Study Cover Image
+   =========================================================== */
+
+.case-cover img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  /*
+   * Cover fills the complete 4:3 container.
+   * Since your PDP cover is also 4:3,
+   * there should be no meaningful cropping.
+   */
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* ===========================================================
+   Existing SVG Covers
+   =========================================================== */
+
+.case-cover svg {
+  width: 62%;
+  height: 62%;
+
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+.case-cover--dark svg {
+  color: var(--gold);
+  opacity: 0.9;
+}
+
+
+/* ===========================================================
+   Cover Typography
+   =========================================================== */
+
+.case-cover-word {
+  font-family: var(--serif);
+  font-size: 34px;
+  letter-spacing: 0.02em;
+
+  fill: var(--gold-deep);
+  opacity: 0.85;
+
+  font-style: italic;
+}
+
+.case-cover-word--light {
+  fill: var(--paper);
+  opacity: 0.92;
+}
+
+
+/* ===========================================================
+   Case Study Caption
+   =========================================================== */
+
+.case-caption {
+  padding: 22px 24px 26px;
+}
+
+.case-caption h3 {
+  font-size: 1.15rem;
+  line-height: 1.32;
+
+  max-width: 26ch;
+
+  transition:
+    color 0.25s var(--ease);
+}
+
+.case-block:hover .case-caption h3 {
+  color: var(--gold-deep);
+}
+
+.case-meta {
+  display: block;
+
+  margin-top: 10px;
+
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+
+
+/* ===========================================================
+   Responsive
+   =========================================================== */
+
+@media (max-width: 900px) {
+
+  .case-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .case-col--offset {
+    margin-top: 0;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .case-caption {
+    padding: 18px 20px 22px;
+  }
+
+  .case-caption h3 {
+    font-size: 1.05rem;
+  }
+
 }
 
 /* ===========================================================
