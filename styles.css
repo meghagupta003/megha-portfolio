@@ -245,6 +245,19 @@ section{ padding: var(--section-y) var(--pad); max-width: var(--max); margin: 0 
 .case-block:hover .case-caption h3{ color: var(--gold-deep); }
 .case-meta{ display: block; margin-top: 10px; font-size: 0.82rem; color: var(--ink-faint); }
 
+.case-cover {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.case-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* ===========================================================
    About
    =========================================================== */
