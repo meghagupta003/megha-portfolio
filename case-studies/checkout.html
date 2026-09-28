@@ -85,6 +85,18 @@ p { font-size:16px; color:#3a352c; max-width:720px; margin-bottom:14px; font-fam
   .grid-2ph { grid-template-columns:1fr; }
 }
 
+img { max-width:100%; height:auto; display:block; }
+
+figure { margin:32px 0; }
+figure img { width:100%; border:1px solid var(--line); background:#fff; }
+figcaption {
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:13px;
+  color:var(--muted);
+  text-align:center;
+  margin-top:12px;
+}
+
 .stat-row { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin:30px 0; }
 .stat-card { background:var(--ink); color:var(--ivory); text-align:center; padding:34px 20px; }
 .stat-card .num { font-size:42px; color:var(--gold-light); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:300; }
